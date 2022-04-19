@@ -1,0 +1,23 @@
+.features {
+    padding-bottom: 47px;
+  }
+  
+  .datails-list {
+    --card-list: 4;
+  }
+  .datails-list-tittle {
+    font-size: inherit;
+    color: var(--title-text-color);
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .datails-pic {
+    background-color: #f5f4fa;
+    height: 120px;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
