@@ -1,4 +1,6 @@
-.clients-link {
+.clients {
+  
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,15 +10,18 @@
     width: 170px;
     height: 92px;
     transition: color var(--transition);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
-  .clients-list {
+
+  &__list {
     --card-list: 6;
   }
-  .client-icon {
+
+  &__icon {
     fill: currentColor;
-  
   }
-  .clients-link:hover,
-  .clients-link:focus {
-    color: var(--accent-color);
-  }
+}

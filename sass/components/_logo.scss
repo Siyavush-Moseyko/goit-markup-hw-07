@@ -5,4 +5,23 @@
     line-height: 1.19;
     color: var(--accent-color);
     letter-spacing: 0.03em;
+   
+    &__header_black {
+      color: var(--title-text-color);
+    }
+    
+    .header & {
+        margin-right: 93px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .footer & {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    &__footer_white {
+      color: var(--primary-color);
+    }
   }

@@ -14,4 +14,9 @@
     overflow: auto;
     transform: translateY(100%);
     transition: transform var(--transition);
+    
+    .portfolio-link:hover &,
+.portfolio-link:focus & {
+   transform: translate(0%);
+}
   }

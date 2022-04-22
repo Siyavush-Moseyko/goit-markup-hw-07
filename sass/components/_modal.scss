@@ -26,11 +26,13 @@
      display: flex;
      justify-content: center;
      align-items: center;
+
+&:hover , 
+&:focus {
+  color: var(--accent-color);
+ }
   }
  .modal-close-btn{
    fill: currentColor;
  }
- .modal-btn:hover , 
- .modal-btn:focus {
-  color: var(--accent-color);
- }
+ 

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
   }
-  .contact-form-tittle{
+  .contact-form__tittle{
    font-weight: 700;
    font-size: 20px;
    line-height: 1.15;
@@ -11,56 +11,58 @@
    color: var(--title-text-color);
    margin-bottom: 12px;
   }
-  .user-data{
+  .contact-form__user-data{
  margin-bottom: 4px;
  display: block;
   }
- .contact-form-input{
+ .contact-form__input{
    width: 100%;
    height: 40px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    padding-left: 42px;
    transition: border-color var(--transition);
- 
+
+   &:hover,
+   &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+   }
  }
- .contact-form-label{
+ .contact-form__input-wrapper {
+  position: relative;
+}
+ .contact-form__label{
    display: block;
    font-style: normal;
    font-weight: 400;
    font-size: 12px;
    line-height: 1.16;
    letter-spacing: 0.01em;
+
+   &:not(:last-child) {
+    margin-bottom: 10px;
+  }
  }
- .contact-form-label:not(:last-child){
-   margin-bottom: 10px;
- }
- .contact-label-wrapper {
+
+ .contact-form__label-wrapper {
    margin-bottom: 20px;
  }
  
- .contact-form-input-wrapper {
-   position: relative;
- }
- .contact-form-icon{
+ .contact-form__icon{
    position: absolute;
    left: 12px;
    top: 50%;
    transform:translateY(-50%);
   transition: fill var(--transition);
- }
- 
- .contact-form-input:hover,
- .contact-form-message:hover,
- .contact-form-input:focus, .contact-form-message:focus {
-   outline: none;
-   border-color: var(--accent-color);
- }
- .contact-form-input:focus ~ .contact-form-icon,
- .contact-form-input:hover ~ .contact-form-icon {
+
+.contact-form__input:focus ~ &,
+.contact-form__input:hover ~ & {
    fill: var(--accent-color);
  }
- .contact-form-message {
+ }
+ 
+ .contact-form__message {
    width: 100%;
    height: 120px;
    border: 1px solid rgba(33, 33, 33, 0.2);
@@ -69,11 +71,19 @@
    padding: 12px 16px;
    resize: none;
    transition: border-color var(--transition);
+
+   &:hover,
+ &:focus {
+   outline: none;
+   border-color: var(--accent-color);
  }
- .contact-form-message::placeholder {
-   color: rgba(117, 117, 117, 0.5);
+
+ &::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
  }
- .contact-form-checkbox {
+
+ .contact-form__checkbox {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -83,41 +93,48 @@
     border: 0;
     clip: rect(0 0 0 0);
   }
-  .checkbox-icon {
+  .contact-form__checkbox-icon {
     width: 16px;
     height: 16px;
       border: 2px solid var(--title-text-color);
     border-radius: 2px;
     margin-right: 8px;
+
+    .contact-form__checkbox:checked + & {
+      color: var(--accent-color);
+      border-color: currentColor;
+      background-color: currentColor;
+      background-image: url('../images/icon-check.svg');
+      background-size: contain;
+      background-origin: border-box;
+    }
+
+    .contact-form__checkbox:focus + & {
+      border: 2px solid var(--accent-color)
+    }
   }
-  .contact-checkbox-label {
+  .contact-form__checkbox-label {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-bottom: 30px;
   }
-  .contact-form-checkbox:checked + .checkbox-icon {
-    color: var(--accent-color);
-    border-color: currentColor;
-    background-color: currentColor;
-    background-image: url('../images/icon-check.svg');
-    background-size: contain;
-    background-origin: border-box;
-  }
-  .contact-form-checkbox:focus + .checkbox-icon {
-    border: 2px solid var(--accent-color)
-  }
-  .checkbox-link{
+  
+  .contact-form__checkbox-link{
     color: var(--accent-color);
   }
   
 // =================================FOOTER=====================//
- .footer-form-wrapper {
+.footer-form{
+  display: flex;
+  
+  &__wrapper {
     display: flex;
     flex-direction: column;
     margin-left: auto;
   }
-  .footer-form-input {
+
+  &__input {
     color: var(--primary-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -125,17 +142,16 @@
     background: transparent;
   height: 50px;
   width: 100%;
-  }
-  .footer-form-input:hover,
-  .footer-form-input:focus {
+
+  &:hover,
+  &:focus {
   outline: none;
   }
-  
-  .footer-form{
-    display: flex;
-    
   }
-  .footer-input-wrapper {
+ 
+  &__input-wrapper {
   width: 358px;
   margin-right: 12px;
   }
+} 
+
