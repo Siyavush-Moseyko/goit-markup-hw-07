@@ -434,12 +434,12 @@ img {
   align-items: center;
 }
 
-.nav-link {
+.nav-list {
   display: flex;
   color: var(--title-text-color);
 }
 
-.nav-link .item:not(:last-child) {
+.nav-list .nav-list__item:not(:last-child) {
   margin-right: 50px;
 }
 
