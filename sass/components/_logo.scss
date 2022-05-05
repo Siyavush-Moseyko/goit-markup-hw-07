@@ -1,27 +1,41 @@
 .logo {
     font-family: Raleway;
     font-weight: bold;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1.16;
     color: var(--accent-color);
     letter-spacing: 0.03em;
    
     &__header_black {
       color: var(--title-text-color);
     }
-    
-    .header & {
-        margin-right: 93px;
-        padding-top: 24px;
-        padding-bottom: 24px;
+
+    &__footer_white {
+      color: var(--primary-color);
     }
 
     .footer & {
       display: block;
       margin-bottom: 20px;
-    }
-
-    &__footer_white {
-      color: var(--primary-color);
+      text-align: center;
     }
   }
+  
+  @media screen and (min-width: 768px) {
+    .header .logo {
+      margin-right: 80px;
+  }
+  }
+  @media screen and (min-width: 1200px) {
+    .header .logo {
+      margin-right: 93px;
+    }
+
+    .footer .logo {
+    text-align: start;
+    }
+  }
+    
+
+    
+  

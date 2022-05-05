@@ -1,5 +1,4 @@
 .clients {
-  
   &__link {
     display: flex;
     align-items: center;
@@ -7,7 +6,7 @@
     color: #afb1b8;
     border: 1px solid currentColor;
     border-radius: 4px;
-    width: 170px;
+    max-width: 210px;
     height: 92px;
     transition: color var(--transition);
 
@@ -17,11 +16,31 @@
     }
   }
 
-  &__list {
-    --card-list: 6;
-  }
-
   &__icon {
     fill: currentColor;
   }
+}
+
+@media screen and (max-width:767px) {
+  .clients__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .clients__list-item {
+  flex-basis: calc((100% - 4 *15px) / 2);
+    margin: 15px;
+  }
+  
+}
+@media screen and (min-width:768px) {
+  .clients__list-item {
+    --card-list:3;
+  }
+}
+
+@media screen and (min-width:1200px){
+.clients__list-item {
+  --card-list:6;
+}
 }

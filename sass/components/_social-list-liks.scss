@@ -24,7 +24,7 @@
           color: var(--primary-color);
         }
 
-        &-title{
+        &-title {
           color: var(--primary-color);
           line-height: 1.14;
           margin-bottom: 20px;
@@ -42,3 +42,8 @@
     }
   }
   
+@media screen and (max-width: 1199px) {
+  .social__link-title {
+    text-align: center;
+  }
+}
